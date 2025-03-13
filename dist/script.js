@@ -5748,7 +5748,7 @@ void main() {
   var { ChannelServerController: ChannelServerController2, ChannelClientController: ChannelClientController2 } = lancelot.network;
   var TILE_SIZE = 16;
   var TEST_ROOM = "GrottoTest";
-  var SIGNAL_SERVER_HOST = "localhost:8080";
+  var SIGNAL_SERVER_HOST = "https://grotto-online.onrender.com";
   var REFRESH_RATE = 1e3 / 60;
   var RTC_CONFIG = {};
   var PlayerSerializer = class extends lancelot.Component {
