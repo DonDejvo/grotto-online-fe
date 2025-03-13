@@ -5750,7 +5750,13 @@ void main() {
   var TEST_ROOM = "GrottoTest";
   var SIGNAL_SERVER_HOST = "https://grotto-online.onrender.com";
   var REFRESH_RATE = 1e3 / 60;
-  var RTC_CONFIG = {};
+  var RTC_CONFIG = {
+    iceServers: [
+      {
+        urls: 'stun:stun.l.google.com:19302',
+      },
+    ],
+  };
   var PlayerSerializer = class extends lancelot.Component {
     serialize() {
       const controller = this.getComponent("controller");
