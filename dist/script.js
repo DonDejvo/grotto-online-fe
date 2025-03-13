@@ -5210,7 +5210,7 @@ void main() {
       this.localConnection = new RTCPeerConnection(server.rtcConfig);
       this.localConnection.onicecandidate = (e) => {
         server.signalServer.sendMessage(socketId, {
-          type: "candidte",
+          type: "candidate",
           candidate: e.candidate
         });
       };
