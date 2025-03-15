@@ -6301,10 +6301,12 @@ void main() {
       }
       this._updateSprite();
       this.updatePhysics(dt);
-      this._entity._scene.renderer.textRenderer.add("Ping: " + this._ping + " ms", 0, 0, this._entity._scene.camera.ui, {
-        fontSize: "20px",
-        color: "cyan"
-      });
+      if(!this._remote) {
+	this._entity._scene.renderer.textRenderer.add("Ping: " + this._ping + " ms", 0, 0, this._entity._scene.camera.ui, {
+          fontSize: "20px",
+          color: "cyan"
+      	});
+      }
     }
     _updateSprite() {
       const sprite = this.getComponent("sprite");
